@@ -1,0 +1,217 @@
+HTML & Tables
+
+Create table in index.html  <table> </table>
+table row element 
+
+    <table>
+          <tr>
+          </tr>
+          <tr>
+          </tr>
+   <table>   
+   
+   
+   Each cell element in a table has to be defined. Data is added using the table data element
+   
+   <table>
+  <tr>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+
+
+Tables have headings--> The table heading element adds titles to rows and columns <th>
+
+A table data has to be placed within a table row
+<table>
+  <tr>
+    <th></th>
+    <th scope="col">Saturday</th>
+    <th scope="col">Sunday</th>
+  </tr>
+  <tr>
+    <th scope="row">Temperature</th>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+
+
+
+
+You can add borders using CSS
+table, td {
+  border: 1px solid black;
+}
+
+
+
+Data can span columns using the colspan attribute. 
+The attributes accepts an integer (greater than or equal to 1) to denote the number of columns it spans across.
+
+<table>
+  <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+  </tr>
+  <tr>
+    <td colspan="2">Out of Town</td>
+    <td>Back in Town</td>
+  </tr>
+</table>
+
+
+
+
+Data can also span multiple rows using the rowspan attribute.
+The rowspan attribute is used for data that spans multiple rows (perhaps an event goes on for multiple hours on a certain day). It accepts an integer (greater than or equal to 1) 
+to denote the number of rows it spans across.
+
+
+
+
+<table>
+  <tr> <!-- Row 1 -->
+    <th></th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+  </tr>
+  <tr> <!-- Row 2 -->
+    <th>Morning</th>
+    <td rowspan="2">Work</td>
+    <td rowspan="3">Relax</td>
+  </tr>
+  <tr> <!-- Row 3 -->
+    <th>Afternoon</th>
+  </tr>
+  <tr> <!-- Row 4 -->
+    <th>Evening</th>
+    <td>Dinner</td>
+  </tr>
+</table>
+
+
+
+Table body: Long tables can be sectioned off using the table body element: <tbody>.
+
+
+The <tbody> element should contain the all of the table's data, excluding the table headings
+
+
+<table>
+  <tbody>
+    <tr>
+      <th></th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+    </tr>
+    <tr>
+      <th>Morning</th>
+      <td rowspan="2">Work</td>
+      <td rowspan="3">Relax</td>
+    </tr>
+    <tr>
+     <th>Afternoon</th>
+    </tr>
+    <tr>
+      <th>Evening</th>
+      <td>Dinner</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+When a table's body is sectioned off, however, it also makes sense to section off the table's headings using the <thead> element.
+
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Morning</th>
+      <td rowspan="2">Work</td>
+      <td rowspan="3">Relax</td>
+    </tr>
+    <tr>
+     <th>Afternoon</th>
+    </tr>
+    <tr>
+      <th>Evening</th>
+      <td>Dinner</td>
+    </tr>
+  </tbody>
+</table>
+
+Note that the table's head still requires a row in order to contain the table headings.
+
+The bottom part of a long table can also be sectioned off using the <tfoot> element.
+
+<table>
+  <thead>
+    <tr>
+      <th>Quarter</th>
+      <th>Revenue</th>
+      <th>Costs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Q1</th>
+      <td>$10M</td>
+      <td>$7.5M</td>
+    </tr>
+    <tr>
+      <th>Q2</th>
+      <td>$12M</td>
+      <td>$5M</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Total</th>
+      <td>$22M</td>
+      <td>$12.5M</td>
+    </tr>
+  </tfoot>
+</table>
+
+
+Footers are often used to contain sums, differences, and other data results.
+
+
+Styling with CSS
+
+
+Lesson Review
+
+The <table> element creates a table.
+
+The <tr> element adds rows to a table.
+
+To add data to a row, you can use the <td> element.
+
+Table headings clarify the meaning of data. Headings are added with the <th> element.
+
+Table data can span columns using the colspan attribute.
+
+Table data can span rows using the rowspan attribute.
+
+Tables can be split into three main sections: a head, a body, and a footer.
+
+A table's head is created with the <thead> element.
+
+A table's body is created with the <tbody> element.
+
+A table's footer is created with the <tfoot> element.
+
+All the CSS properties you learned about in this course can be applied to tables and their data.
+
